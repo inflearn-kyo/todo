@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import TodoInput from "@/components/TodoInput";
 import FilterBar from "@/components/FilterBar";
 import SortBar from "@/components/SortBar";
+import TodoStats from "@/components/TodoStats";
 import TodoList from "@/components/TodoList";
 import { mockTodos } from "@/lib/mock-data";
 import { Filter, Priority, Sort, Todo } from "@/lib/types";
@@ -54,6 +55,7 @@ export default function Home() {
   return (
     <>
       <Header todos={todos} />
+      <TodoStats todos={todos} />
       <TodoInput onAdd={addTodo} />
       <FilterBar filter={filter} onFilterChange={setFilter} />
       <SortBar sort={sort} onSortChange={setSort} />

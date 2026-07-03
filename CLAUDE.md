@@ -25,7 +25,6 @@ npm run lint     # eslint (flat config, eslint-config-next core-web-vitals + typ
 - **상태는 아래로, 콜백은 위로.** `page.tsx`가 `addTodo` / `toggleTodo` / `deleteTodo`를 정의하고, `todos` 배열과 이 핸들러들을 프레젠테이션 컴포넌트(`Header`, `TodoInput`, `FilterBar`, `TodoList` → `TodoItem`)에 전달합니다. 컴포넌트에는 비즈니스 로직이 없습니다.
 - **공유 타입은 `lib/types.ts`에 있습니다**(`Todo`, `Filter`). `@/*` 경로 별칭(저장소 루트로 매핑, 예: `@/lib/types`, `@/components/TodoItem`)을 통해 임포트하세요.
 
-
 ## 코딩 컨벤션
 
 - 들여쓰기는 2칸

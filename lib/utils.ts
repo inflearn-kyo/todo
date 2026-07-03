@@ -1,9 +1,11 @@
 import { Todo, Priority } from "@/lib/types";
 
 // 날짜 문자열을 보기 좋게 바꿔주는 함수
-export function fd(d: string) {
-  let result = "";
+// 파싱에 실패하면 원본 문자열을 그대로 반환한다.
+export function formatDate(d: string) {
   const x = new Date(d);
+  if (isNaN(x.getTime())) return d;
+  let result = "";
   const y = x.getFullYear();
   const m = x.getMonth() + 1;
   const dd = x.getDate();

@@ -1,7 +1,7 @@
 "use client";
 
 import { Priority, Todo } from "@/lib/types";
-import { fd, PRIORITY_LABEL } from "@/lib/utils";
+import { formatDate, PRIORITY_LABEL } from "@/lib/utils";
 import Checkbox from "./Checkbox";
 
 interface Props {
@@ -39,8 +39,8 @@ export default function TodoItem({ todo, onToggle, onDelete }: Props) {
           </p>
         </div>
         <span className="text-xs text-gray-400">
-          {fd(todo.createdAt)}
-          {todo.dueDate && ` · 마감 ${fd(todo.dueDate)}`}
+          {formatDate(todo.createdAt)}
+          {todo.dueDate && ` · 마감 ${formatDate(todo.dueDate)}`}
         </span>
       </div>
       <button
